@@ -1,0 +1,14 @@
+.expandable__toggle-button {
+  background: none;
+  border: none;
+  color: #f0a500;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.expandable__toggle-button:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
