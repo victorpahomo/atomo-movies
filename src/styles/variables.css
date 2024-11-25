@@ -1,0 +1,18 @@
+:root {
+  /* Primary colors */
+  --primary: #0b0f19;
+  --secondary: #26cd7b;
+
+  /* Text colors */
+  --text-primary: #ffffff;
+  --text-secondary: #f9f9f9;
+  --text-active: var(--secondary);
+
+  /* Background colors */
+  --bg-color: var(--primary);
+  --bg-modal-primary: rgba(0, 0, 0, 0.5);
+  --bg-modal-secondary: rgba(0, 0, 0, 0.8);
+
+  /* Other colors */
+  --link-primary: var(--secondary);
+}

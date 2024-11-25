@@ -1,5 +1,9 @@
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
+import AppRoutes from "./router/AppRoutes";
 
-createRoot(document.getElementById("root")!).render(<App />);
+import "@/styles/global.css";
+import "@/styles/custom.css";
+import "@/styles/variables.css";
+
+const root = document.getElementById("root") as HTMLElement;
+createRoot(root).render(<AppRoutes />);
