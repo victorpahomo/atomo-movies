@@ -1,0 +1,19 @@
+.content-layout__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: 3rem;
+}
+
+/* Cuando llegue al tope aumenta el margin */
+@media screen and (min-width: 2144px) {
+  .content-layout__container {
+    margin-inline: 10rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-layout__container {
+    margin-inline: 1.5rem;
+  }
+}

@@ -1,0 +1,30 @@
+.recommendations-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto 2.5rem;
+  padding-inline: 3rem;
+}
+
+.recommendations__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.recommendations__loading-message {
+  color: #f0a500;
+  align-self: center;
+}
+
+.recommendations__no-data-message {
+  color: #b0b0b0;
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .recommendations-container {
+    padding-inline: 0;
+  }
+}

@@ -1,0 +1,28 @@
+.movies-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2.8em;
+  padding: 1rem;
+  justify-content: center;
+  justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .movies-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .movies-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    padding: 0.5rem;
+    gap: 1.5em;
+  }
+}

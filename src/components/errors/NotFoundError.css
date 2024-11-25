@@ -1,0 +1,26 @@
+.not-found {
+  display: flex;
+  min-height: 40vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  gap: 10px;
+  margin-top: 5rem;
+}
+
+.not-found h2,
+.not-found p {
+  text-align: center;
+  margin: 0.3rem;
+}
+
+.not-found__link {
+  color: #1d8f58;
+  font-weight: bolder;
+}
+
+.not-found__link:hover {
+  transition: 0.3s ease-in-out;
+  color: #26cd7b;
+}

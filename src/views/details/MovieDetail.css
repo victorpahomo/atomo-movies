@@ -1,0 +1,159 @@
+.movie-detail {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.movie-detail__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.movie-detail__background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+.movie-detail__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 17, 31, 0.801);
+  z-index: 2;
+}
+
+.movie-detail__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  max-width: 1200px;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-radius: 16px;
+}
+
+.movie-detail__content-image {
+  border-radius: 12px;
+  width: 250px;
+  aspect-ratio: 2 / 3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  filter: saturate(0.8) brightness(1.2);
+}
+
+.movie-detail__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.movie-detail__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.movie-detail__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.movie-detail__release-date {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.movie-detail__metadata {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #bbb;
+}
+
+.movie-detail__original-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.movie-detail__vote {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.movie-detail__tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #cacaca;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.movie-detail__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.movie-detail__summary-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.movie-detail__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e5e5e5;
+  text-align: justify;
+}
+
+.movie-detail__actions {
+  margin-top: 1rem;
+}
+
+.movie-detail__button {
+  padding: 0.8rem 1.6rem;
+  background-color: #fd921e;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.movie-detail__button:hover {
+  background-color: #f77e00;
+}
+
+.error-message,
+.loading-message,
+.no-data-message {
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  margin-top: 25vh;
+}

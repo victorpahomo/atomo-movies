@@ -1,0 +1,85 @@
+.skeleton-card-container {
+  width: 220px;
+  height: 350px;
+  border-radius: 20px;
+  background-color: #2a2f3a;
+  margin: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: progress;
+  opacity: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 60%;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(90deg, #2a2f3a 25%, #3c4454 50%, #2a2f3a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-title {
+  width: 80%;
+  height: 20px;
+  background: linear-gradient(90deg, #2a2f3a 25%, #3c4454 50%, #2a2f3a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+.skeleton-details {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.skeleton-detail {
+  width: 40%;
+  height: 15px;
+  background: linear-gradient(90deg, #2a2f3a 25%, #3c4454 50%, #2a2f3a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 5px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.cards-skeleton {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2.8em;
+  padding: 1rem;
+  justify-content: center;
+  justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .cards-skeleton {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    padding: 0.5rem;
+    gap: 1.5em;
+  }
+
+  .skeleton-card-container {
+    width: 180px;
+    height: 300px;
+  }
+}

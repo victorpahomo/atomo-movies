@@ -1,0 +1,27 @@
+.tv-shows-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.tv-shows-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2.8em;
+  padding: 1rem;
+  justify-content: center;
+  justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .tv-shows-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tv-shows-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    padding: 0.5rem;
+    gap: 1.5em;
+  }
+}
