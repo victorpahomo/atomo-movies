@@ -1,0 +1,50 @@
+.scroll-layout {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.scroll-layout__container {
+  display: flex;
+  gap: 1em;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.scroll-layout__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #263455b9;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.scroll-layout__button--prev {
+  left: 0;
+}
+
+.scroll-layout__button--next {
+  right: 0;
+}
+
+.scroll-layout__button:hover {
+  background-color: #6b82b9b9;
+}
+
+.scroll-layout__title {
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.scroll-layout__item {
+  scroll-snap-align: start;
+}
