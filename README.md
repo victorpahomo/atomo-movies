@@ -1,50 +1,97 @@
-# React + TypeScript + Vite
+# Atomo Movies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Atomo Movies** es una aplicación web desarrollada como prueba técnica que permite explorar películas y series usando la API de TMDB. El proyecto está construido con un enfoque minimalista y moderno, siguiendo estrictamente buenas prácticas de desarrollo.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- **Vite**: Para un entorno de desarrollo rápido.
+- **React**: Librería principal
+- **TypeScript**: Tipado estático para mayor robustez.
+- **React Router**: Manejo de rutas en la aplicación.
+- **React Testing Library + Vitest**: Pruebas unitarias para garantizar la calidad del código.
+- **CSS puro**: Diseños y animaciones sin utilizar librerías de estilos externas.
+- **lite-youtube Script de optimización**: Para mejorar el rendimiento de los videos de YouTube.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 📋 Características principales
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 🌟 Minimalismo puro
+- **Vanilla React y CSS puro**: 
+  - No se usaron librerías adicionales para estilos, estado o fetch.
+  - Diseños realizados completamente con **CSS puro**, siguiendo la metodología **BEM** para clases CSS.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### ⚡ Rendimiento y optimización
+- **Imágenes optimizadas**: Todas las imágenes locales se optimizaron externamente en formato **WebP**.
+- **Carga eficiente**: Skeletons animados para mejorar la experiencia durante la carga de datos.
+- **Infinite scroll**: Implementado en algunas páginas de exploración de películas y series.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 🎯 Funcionalidades principales
+- **Inicio dinámico**: Una gran tarjeta en la página de inicio muestra contenido "Próximamente en cartelera" que cambia en cada recarga.
+- **Filtrado por categoría**: Para buscar contenido fácilmente.
+- **Manejo de estado y excepciones**: Hooks reutilizables gestionan los llamados a la API, incluyendo estados de carga, errores y excepciones.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 🔗 Navegación
+- **Enrutamiento dinámico**: Con React Router.
+- **Alias `@`**: Para una estructura de rutas más clara y organizada.
+
+---
+
+## 🏗️ Convenciones de desarrollo
+
+- **Carpetas**: `kebab-case` (ejemplo: `movie-details`).
+- **Archivos React**: `PascalCase` (ejemplo: `MovieCard.tsx`).
+- **Clases CSS**: Metodología **BEM**.
+- **Archivos CSS**: El nombre coincide con el componente vinculado (ejemplo: `MovieCard.css`).
+
+---
+
+## 🛠️ Cómo ejecutar el proyecto
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/victorpahomo/atomo-movies
+   cd atomo-movies
+   ```
+
+2. Instala las dependencias:
+  ```bash
+  npm install
+   ```
+3. Ejecuta el proyecto en modo desarrollo:
+  ```bash
+  npm run dev
+   ```
+
+## 🧪 Pruebas unitarias
+
+El proyecto incluye pruebas unitarias básicas. Para ejecutarlas:
+  ```bash
+  npm run test
+   ```
+
+## 📂 Estructura del proyecto
+
+El proyecto sigue principios **SOLID** para mantener el código limpio y reutilizable.
+
+- **Carpetas organizadas**: Basadas en características o módulos principales.
+- **Hooks reutilizables**: Todos los llamados a la API están encapsulados en hooks.
+- **Códigos animados y skeletons**: Diseñados para mejorar la UX.
+
+---
+
+## 🌐 Demo (opcional)
+
+[Enlace a la demo](https://atomo-movies.vercel.app/)
+
+---
+
+## ✨ Contribuciones
+
+Este proyecto sigue un enfoque minimalista. Si tienes ideas o sugerencias, ¡serán bienvenidas! 
+
+---
+
+### Desarrollado por Víctor Manuel Morales Hoyos
