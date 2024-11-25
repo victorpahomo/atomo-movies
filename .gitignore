@@ -25,3 +25,6 @@ dist-ssr
 
 # Env files
 .env
+
+# Package files
+package-lock.json
