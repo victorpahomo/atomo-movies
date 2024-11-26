@@ -88,7 +88,7 @@ const MediaDetail: React.FC<MediaDetailProps> = ({
           <div className="media-detail__vote">
             <StarSvg size={30} />
             <p className="media-detail__vote-average">
-              {voteAverage?.toFixed(1).toLocaleString()}
+              {voteAverage?.toFixed(1)?.toLocaleString()}
             </p>
             <p className="media-detail__vote-count">
               | {voteCount?.toLocaleString()} votos

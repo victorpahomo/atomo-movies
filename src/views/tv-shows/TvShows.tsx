@@ -10,7 +10,7 @@ import TvShowCard from "@/components/ui/card/TvShowCard";
 import "./TvShows.css";
 
 export default function TvShowsView() {
-  const { tvShows, loading, error, hasMore, setPage, setSort } =
+  const { tvShows, loading, error, hasMore, setPage, setSort, isRefreshing } =
     useDiscoverTvShows();
 
   const handleScroll = () => {
@@ -31,7 +31,7 @@ export default function TvShowsView() {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [loading, hasMore]);
+  }, [hasMore]);
 
   return (
     <MainLayout>
@@ -47,7 +47,7 @@ export default function TvShowsView() {
             <TvShowCard tvShow={tvShow} key={tvShow.id} />
           ))}
         </div>
-        {loading && <CardsSkeleton />}
+        {(loading || isRefreshing) && <CardsSkeleton />}
       </MarginLayout>
     </MainLayout>
   );

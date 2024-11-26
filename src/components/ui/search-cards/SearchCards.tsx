@@ -50,7 +50,7 @@ export default function SearchCards({ items, closeModal }: SearchCardsProps) {
             <div className="search-cards__card-vote-container">
               <StarSvg size={19} />
               <p className="search-cards__card-vote">
-                {item.vote_average?.toFixed(1)}
+                {item?.vote_average?.toFixed(1)}
               </p>
             </div>
           </div>
