@@ -37,7 +37,7 @@ export default function MoviesView() {
       <MarginLayout>
         <div className="movies-header">
           <h2>Descubre Películas</h2>
-          <SortSelect onSortChange={handleSortChange} />
+          <SortSelect onSortChange={handleSortChange} type="movies" />
         </div>
 
         {error && <p>Error: {error}</p>}

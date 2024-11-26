@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { BASE_URL, API_TOKEN } from "@/utils/constants";
-import { SORT_OPTIONS } from "@/utils/constants";
+import { SORT_SHARED_OPTIONS } from "@/utils/constants";
 import { Movie } from "@/types/movie.types";
 
 export function useDiscoverMovies() {
@@ -11,7 +11,9 @@ export function useDiscoverMovies() {
   const [error, setError] = useState<string | null>(null);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
-  const [sort, setSort] = useState<string>(SORT_OPTIONS.voteCount.valueDesc); // Default sort
+  const [sort, setSort] = useState<string>(
+    SORT_SHARED_OPTIONS.voteCount.valueDesc
+  ); // Default sort
 
   const fetchDiscoverMovies = async (
     pageNumber: number,
