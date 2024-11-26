@@ -10,6 +10,8 @@
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  overscroll-behavior: none;
+  min-width: 100%;
 }
 
 .scroll-layout__button {
