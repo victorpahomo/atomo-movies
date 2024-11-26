@@ -82,6 +82,13 @@
   background: #0b0f190a;
 }
 
+@media screen and (max-width: 375px) {
+  .movie-hero {
+    height: 80vh;
+    margin-top: 0.5rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .movie-hero__title {
     font-size: 2rem;

@@ -5,6 +5,7 @@ import { MediaItem } from "@/types/mediaItem.types";
 import { POSTER_SIZES } from "@/utils/constants";
 
 import "./SearchCards.css";
+import StarSvg from "@/assets/svg-components/StarSvg";
 
 interface SearchCardsProps {
   items: MediaItem[];
@@ -45,6 +46,13 @@ export default function SearchCards({ items, closeModal }: SearchCardsProps) {
             <h3 className="search-cards__card-title">
               {item.title || item.name}
             </h3>
+
+            <div className="search-cards__card-vote-container">
+              <StarSvg size={19} />
+              <p className="search-cards__card-vote">
+                {item.vote_average?.toFixed(1)}
+              </p>
+            </div>
           </div>
         </div>
       ))}

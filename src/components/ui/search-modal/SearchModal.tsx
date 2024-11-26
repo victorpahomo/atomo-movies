@@ -72,6 +72,7 @@ export default function SearchModal() {
                 type="text"
                 placeholder="Buscar películas o series..."
                 onChange={handleOnChange}
+                autoFocus
               />
               <CloseSvg onClick={closeModal} />
             </div>
