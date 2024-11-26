@@ -54,3 +54,10 @@
     width: 90%;
   }
 }
+
+@media screen and (min-width: 1420px) {
+  .video-modal__content {
+    max-width: 1200px;
+    height: auto;
+  }
+}
