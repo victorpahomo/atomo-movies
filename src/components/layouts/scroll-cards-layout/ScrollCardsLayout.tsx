@@ -20,19 +20,29 @@ export default function ScrollCardsLayout({
 
   const scrollNext = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({
-        left: SCROLL_DISTANCE,
-        behavior: "smooth",
-      });
+      const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
+
+      // Verify if there is more space to scroll to the right
+      if (scrollLeft + clientWidth < scrollWidth) {
+        containerRef.current.scrollBy({
+          left: SCROLL_DISTANCE,
+          behavior: "smooth",
+        });
+      }
     }
   };
 
   const scrollPrev = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({
-        left: -SCROLL_DISTANCE,
-        behavior: "smooth",
-      });
+      const { scrollLeft } = containerRef.current;
+
+      // Verify if there is more space to scroll to the left
+      if (scrollLeft > 0) {
+        containerRef.current.scrollBy({
+          left: -SCROLL_DISTANCE,
+          behavior: "smooth",
+        });
+      }
     }
   };
 

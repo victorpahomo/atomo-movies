@@ -67,7 +67,5 @@ export function useDiscoverTvShows() {
     if (page > 1) fetchDiscoverTvShows(page, sort); // Fetch more TV shows on page change
   }, [page]);
 
-  console.log("useDiscoverTvShows render");
-
   return { tvShows, loading, error, hasMore, setPage, setSort, isRefreshing };
 }
