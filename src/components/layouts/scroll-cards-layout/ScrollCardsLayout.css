@@ -10,7 +10,7 @@
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  overscroll-behavior: none;
+  overscroll-behavior-x: contain;
   min-width: 100%;
 }
 
