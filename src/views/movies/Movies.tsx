@@ -9,7 +9,7 @@ import MovieCard from "@/components/ui/card/MovieCard";
 import "./Movies.css";
 
 export default function MoviesView() {
-  const { movies, loading, error, hasMore, setPage, setSort } =
+  const { movies, loading, error, hasMore, setPage, setSort, isRefreshing } =
     useDiscoverMovies();
 
   const handleScroll = () => {
@@ -46,7 +46,7 @@ export default function MoviesView() {
             <MovieCard movie={movie} key={movie.id} />
           ))}
         </div>
-        {loading && <CardsSkeleton />}
+        {(loading || isRefreshing) && <CardsSkeleton />}
       </MarginLayout>
     </MainLayout>
   );
