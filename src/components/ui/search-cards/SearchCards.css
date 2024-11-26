@@ -52,3 +52,63 @@
   color: #ffffff;
   transition: color 0.45s ease-in-out;
 }
+
+.search-cards__card-vote-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.search-cards__card-vote {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #cacaca;
+}
+
+@media screen and (max-width: 768px) {
+  .search-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 20px 20px 20px;
+  }
+
+  .search-cards__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .search-cards__card-img {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .search-cards__card-info {
+    text-align: left;
+    flex-grow: 1;
+    padding: 0;
+  }
+
+  .search-cards__card-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+
+  .search-cards__card-vote-container {
+    justify-content: flex-start;
+    margin-left: 10px;
+    gap: 4px;
+  }
+
+  .search-cards__card-vote {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}

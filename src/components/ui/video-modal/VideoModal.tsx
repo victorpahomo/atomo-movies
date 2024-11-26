@@ -45,7 +45,7 @@ export default function VideoModal({
   const closeModal = () => setIsOpen(false);
 
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if ((e.target as HTMLElement).classList.contains("modal-overlay")) {
+    if ((e.target as HTMLElement).classList.contains("video-modal__overlay")) {
       closeModal();
     }
   };
@@ -101,6 +101,9 @@ export default function VideoModal({
                 params="controls=1"
               ></lite-youtube>
             </div>
+            <p className="video-modal__content-disclaimer">
+              Ver en pantalla completa para mejor experiencia.
+            </p>
           </div>
         </div>
       )}

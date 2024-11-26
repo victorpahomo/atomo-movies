@@ -23,6 +23,20 @@
   .movies-container {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     padding: 0.5rem;
-    gap: 1.5em;
+    gap: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .movies-container {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.6em;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .movies-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.5em;
   }
 }

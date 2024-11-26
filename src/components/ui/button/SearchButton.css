@@ -26,6 +26,7 @@
 
 @media (max-width: 768px) {
   .search-button {
+    margin-top: 10px;
     max-width: 100%;
     width: 100%;
     padding: 8px;
@@ -39,10 +40,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .search-button__text {
-    display: none;
-  }
-
   .search-button {
     padding: 6px;
     border-radius: 12px;
@@ -51,5 +48,11 @@
   .search-button svg {
     width: 16px;
     height: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search-button__text {
+    display: none;
   }
 }
