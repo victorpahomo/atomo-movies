@@ -57,8 +57,11 @@ export function useDiscoverMovies() {
   };
 
   useEffect(() => {
-    setPage(1); // Reset page on sort change
-    fetchDiscoverMovies(1, sort); // Fetch movies on sort change
+    if (sort) {
+      setMovies([]); // Clear the list.
+      setPage(1); // Reset the page.
+      fetchDiscoverMovies(1, sort); // Call the API with the new sort criteria.
+    }
   }, [sort]);
 
   useEffect(() => {

@@ -56,13 +56,18 @@ export function useDiscoverTvShows() {
   };
 
   useEffect(() => {
-    setPage(1); // Reset page on sort change
-    fetchDiscoverTvShows(1, sort); // Fetch TV shows with new sort
+    if (sort) {
+      setTvShows([]); // Clear the list.
+      setPage(1); // Reset the page.
+      fetchDiscoverTvShows(1, sort); // Call the API with the new sort criteria.
+    }
   }, [sort]);
 
   useEffect(() => {
     if (page > 1) fetchDiscoverTvShows(page, sort); // Fetch more TV shows on page change
   }, [page]);
+
+  console.log("useDiscoverTvShows render");
 
   return { tvShows, loading, error, hasMore, setPage, setSort, isRefreshing };
 }

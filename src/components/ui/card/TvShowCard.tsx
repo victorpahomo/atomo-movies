@@ -32,7 +32,7 @@ export default function TvShowCard({ tvShow }: CardProps) {
           <div className="card-content__description--vote">
             <StarSvg />
             <p className="card-content__description--vote-average">
-              {tvShow?.vote_average.toFixed(1)}
+              {tvShow?.vote_average?.toFixed(1)}
             </p>
           </div>
           <p className="card-content__description--view-detail">Ver detalle</p>
