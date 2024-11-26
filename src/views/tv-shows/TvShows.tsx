@@ -25,7 +25,6 @@ export default function TvShowsView() {
   };
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log("value", event.target.value);
     setSort(event.target.value); // Update the sorting criteria
   };
 
