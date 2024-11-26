@@ -38,7 +38,7 @@ export default function TvShowsView() {
       <MarginLayout>
         <div className="tv-shows-header">
           <h2>Descubre Series de TV</h2>
-          <SortSelect onSortChange={handleSortChange} />
+          <SortSelect onSortChange={handleSortChange} type="tvShows" />
         </div>
 
         {error && <p>Error: {error}</p>}

@@ -22,25 +22,14 @@ const PROFILE_SIZES = {
   original: "original",
 };
 
-const SORT_OPTIONS = {
-  title: {
-    valueAsc: "original_title.asc",
-    valueDesc: "original_title.desc",
-    labelAsc: "Título ↑",
-    labelDesc: "Título ↓",
-  },
+const SORT_SHARED_OPTIONS = {
   popularity: {
     valueAsc: "popularity.asc",
     valueDesc: "popularity.desc",
     labelAsc: "Popularidad ↑",
     labelDesc: "Popularidad ↓",
   },
-  releaseDate: {
-    valueAsc: "primary_release_date.asc",
-    valueDesc: "primary_release_date.desc",
-    labelAsc: "Fecha de lanzamiento ↑",
-    labelDesc: "Fecha de lanzamiento ↓",
-  },
+
   vote: {
     valueAsc: "vote_average.asc",
     valueDesc: "vote_average.desc",
@@ -52,6 +41,38 @@ const SORT_OPTIONS = {
     valueDesc: "vote_count.desc",
     labelAsc: "Cantidad de votos ↑",
     labelDesc: "Cantidad de votos ↓",
+  },
+};
+
+const SORT_MOVIES_OPTIONS = {
+  ...SORT_SHARED_OPTIONS,
+  title: {
+    valueAsc: "title.asc",
+    valueDesc: "title.desc",
+    labelAsc: "Título ↑",
+    labelDesc: "Título ↓",
+  },
+  releaseDate: {
+    valueAsc: "primary_release_date.asc",
+    valueDesc: "primary_release_date.desc",
+    labelAsc: "Fecha de lanzamiento ↑",
+    labelDesc: "Fecha de lanzamiento ↓",
+  },
+};
+
+const SORT_TV_SHOWS_OPTIONS = {
+  ...SORT_SHARED_OPTIONS,
+  name: {
+    valueAsc: "name.asc",
+    valueDesc: "name.desc",
+    labelAsc: "Nombre ↑",
+    labelDesc: "Nombre ↓",
+  },
+  firstAirDate: {
+    valueAsc: "first_air_date.asc",
+    valueDesc: "first_air_date.desc",
+    labelAsc: "Fecha de estreno ↑",
+    labelDesc: "Fecha de estreno ↓",
   },
 };
 
@@ -68,5 +89,7 @@ export {
   API_TOKEN,
   IMAGE_URL,
   PROFILE_SIZES,
-  SORT_OPTIONS,
+  SORT_SHARED_OPTIONS,
+  SORT_MOVIES_OPTIONS,
+  SORT_TV_SHOWS_OPTIONS,
 };

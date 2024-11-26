@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { BASE_URL, API_TOKEN } from "@/utils/constants";
-import { SORT_OPTIONS } from "@/utils/constants";
+import { SORT_SHARED_OPTIONS } from "@/utils/constants";
 import { TvShow } from "@/types/tvShow.types";
 
 export function useDiscoverTvShows() {
@@ -10,7 +10,9 @@ export function useDiscoverTvShows() {
   const [error, setError] = useState<string | null>(null);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
-  const [sort, setSort] = useState<string>(SORT_OPTIONS.voteCount.valueDesc); // Default sort
+  const [sort, setSort] = useState<string>(
+    SORT_SHARED_OPTIONS.voteCount.valueDesc
+  ); // Default sort
 
   const fetchDiscoverTvShows = async (
     pageNumber: number,

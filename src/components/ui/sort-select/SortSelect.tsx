@@ -1,12 +1,13 @@
-import { SORT_OPTIONS } from "@/utils/constants";
+import { SORT_MOVIES_OPTIONS, SORT_TV_SHOWS_OPTIONS } from "@/utils/constants";
 
 import "./SortSelect.css";
 
 interface SortSelectProps {
   onSortChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  type: "movies" | "tvShows";
 }
 
-export default function SortSelect({ onSortChange }: SortSelectProps) {
+export default function SortSelect({ onSortChange, type }: SortSelectProps) {
   return (
     <div className="sort-select-container">
       <label htmlFor="sort-select" className="sort-label">
@@ -17,9 +18,15 @@ export default function SortSelect({ onSortChange }: SortSelectProps) {
         className="sort-select"
         id="sort-select"
         onChange={onSortChange}
-        defaultValue={SORT_OPTIONS.voteCount.valueDesc}
+        defaultValue={
+          type === "movies"
+            ? SORT_MOVIES_OPTIONS.voteCount.valueDesc
+            : SORT_TV_SHOWS_OPTIONS.voteCount.valueDesc
+        }
       >
-        {Object.values(SORT_OPTIONS).map((option) => (
+        {Object.values(
+          type === "movies" ? SORT_MOVIES_OPTIONS : SORT_TV_SHOWS_OPTIONS
+        ).map((option) => (
           <optgroup
             key={option.labelAsc}
             label={option.labelAsc.split(" ")[0]}
