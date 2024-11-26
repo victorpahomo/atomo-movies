@@ -49,4 +49,5 @@
 
 .scroll-layout__item {
   scroll-snap-align: start;
+  flex-shrink: 0;
 }
